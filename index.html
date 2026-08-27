@@ -15,9 +15,9 @@
      OneSignalDeferred.push(async function(OneSignal) {
      await OneSignal.init({
       appId: "7c7846ae-53e5-4578-9b87-c4c26154477e",
-      path: "/Mate369-pwa/",
       serviceWorkerParam: { scope: "/Mate369-pwa/" },
-      serviceWorkerPath: "OneSignalSDKWorker.js"
+      serviceWorkerPath: "/Mate369-pwa/OneSignalSDKWorker.js",
+      serviceWorkerUpdaterPath: "/Mate369-pwa/OneSignalSDKWorker.js"
     });
   });
 </script>
