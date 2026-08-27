@@ -1,7 +1,7 @@
 {
   "name": "Mate369: Aussie Pokies & Casino",
   "short_name": "Mate369",
-  "start_url": "/",
+  "start_url": "/?from_pwa=1",
   "scope": "/",
   "display": "standalone",
   "background_color": "#00875f",
