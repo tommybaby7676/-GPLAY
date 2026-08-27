@@ -216,6 +216,61 @@
             <div class="rev-body">Best pokies platform in Australia hands down. Daily free credits and great VIP support. 10/10 recommend!</div>
             <div class="rev-helpful">64 people found this review helpful</div>
         </div>
+        <!-- 1. 查看更多評論按鈕 -->
+        <div style="text-align: center; margin: 15px 0;">
+            <button type="button" id="see-all-reviews-btn" style="background: none; border: none; color: #00875f; font-size: 14px; font-weight: 500; cursor: pointer; padding: 8px 16px;">
+                See all reviews
+            </button>
+        </div>
+
+        <!-- 預先隱藏的額外 2 則澳洲評論 -->
+        <div id="more-reviews" style="display: none;">
+            <div class="review-item">
+                <div class="user-row">
+                    <div class="user-avatar" style="background: #1a73e8;">C</div>
+                    <div class="user-name">Callum Smith (Perth)</div>
+                </div>
+                <div class="review-meta">
+                    <span class="rev-stars">★★★★★</span>
+                    <span class="rev-date">August 12, 2026</span>
+                </div>
+                <div class="rev-body">Hit the grand jackpot on Super Ace last night! Withdrawal landed in my CommBank account in under 3 minutes via PayID. Legit platform.</div>
+                <div class="rev-helpful">42 people found this review helpful</div>
+            </div>
+
+            <div class="review-item">
+                <div class="user-row">
+                    <div class="user-avatar" style="background: #e37400;">L</div>
+                    <div class="user-name">Lachlan Hughes (Sydney)</div>
+                </div>
+                <div class="review-meta">
+                    <span class="rev-stars">★★★★★</span>
+                    <span class="rev-date">August 05, 2026</span>
+                </div>
+                <div class="rev-body">Clean UI, no annoying popups, and the RTP feels much better than other sites. Good on ya Mate369!</div>
+                <div class="rev-helpful">19 people found this review helpful</div>
+            </div>
+        </div>
+
+        <!-- 2. 開發者支援資訊 -->
+        <div style="margin-top: 25px; border-top: 1px solid #e8eaed; padding-top: 15px;">
+            <div class="section-hd" style="font-size: 15px;">App support</div>
+            <div style="font-size: 13px; color: #5f6368; line-height: 1.8; margin-top: 8px;">
+                <div>🌐 <b>Website:</b> mate369.com</div>
+                <div>📧 <b>Email:</b> support@mate369.com</div>
+                <div>🔒 <b>Privacy Policy:</b> Verified and Secure 256-bit SSL</div>
+            </div>
+        </div>
+
+        <!-- 3. Google Play 標準頁尾 -->
+        <div style="margin-top: 30px; padding-top: 15px; border-top: 1px solid #f1f3f4; font-size: 11px; color: #70757a; text-align: center; line-height: 1.6;">
+            <div style="margin-bottom: 6px;">
+                <span>Google Play Terms of Service</span> • 
+                <span>Privacy</span> • 
+                <span>Developers</span>
+            </div>
+            <div>All prices include GST. © 2026 Google LLC</div>
+        </div>
     </div>
 </div>
 
@@ -272,6 +327,15 @@
             }
         }, 180);
     });
+    // 點擊展開更多評論
+    const seeAllBtn = document.getElementById('see-all-reviews-btn');
+    const moreReviews = document.getElementById('more-reviews');
+    if (seeAllBtn && moreReviews) {
+        seeAllBtn.addEventListener('click', () => {
+            moreReviews.style.display = 'block';
+            seeAllBtn.style.display = 'none';
+        });
+    }
 </script>
 
 </body>
