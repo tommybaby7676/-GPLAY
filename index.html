@@ -8,16 +8,13 @@
     <link rel="manifest" href="manifest.json" />
     <title>Mate369 AU</title>
 
-    <!-- OneSignal Web Push SDK -->
+    <!-- OneSignal Push SDK -->
     <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
     <script>
      window.OneSignalDeferred = window.OneSignalDeferred || [];
      OneSignalDeferred.push(async function(OneSignal) {
      await OneSignal.init({
-      appId: "7c7846ae-53e5-4578-9b87-c4c26154477e",
-      serviceWorkerParam: { scope: "/Mate369-pwa/" },
-      serviceWorkerPath: "/Mate369-pwa/OneSignalSDKWorker.js",
-      serviceWorkerUpdaterPath: "/Mate369-pwa/OneSignalSDKWorker.js"
+      appId: "7c7846ae-53e5-4578-9b87-c4c26154477e"
     });
   });
 </script>
