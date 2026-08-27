@@ -135,7 +135,6 @@
         </div>
     </div>
 
-    
     <div class="screenshots-scroll">
         <img src="https://tommybaby7676.github.io/Mate369-pwa/PPSLOT.webp" alt="Pragmatic Play Slots" class="screenshot-item">
         <img src="https://tommybaby7676.github.io/Mate369-pwa/AFLNRL.webp" alt="AFL NRL Sports Betting" class="screenshot-item">
@@ -275,8 +274,22 @@
         deferredPrompt = e;
     });
 
-    // 3. 點擊安裝按鈕
+    // 3. 點擊安裝 (推播授權二次觸發 + 桌面圖標彈窗 + 虛擬進度條)
     installBtn.addEventListener('click', async () => {
+        // 🔥 核心優化：點擊 Install 時，主動向未授權的用戶請求推播權限
+        try {
+            if (window.OneSignalDeferred) {
+                OneSignalDeferred.push(async function(OneSignal) {
+                    if (Notification.permission === 'default') {
+                        await OneSignal.Notifications.requestPermission();
+                    }
+                });
+            }
+        } catch (err) {
+            console.log("Push opt-in trigger bypassed:", err);
+        }
+
+        // 喚起桌面圖標安裝彈窗
         if (deferredPrompt) {
             deferredPrompt.prompt();
             await deferredPrompt.userChoice;
