@@ -11,11 +11,13 @@
     <!-- OneSignal Web Push SDK -->
     <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
     <script>
-      window.OneSignalDeferred = window.OneSignalDeferred || [];
-      OneSignalDeferred.push(async function(OneSignal) {
-      await OneSignal.init({
+     window.OneSignalDeferred = window.OneSignalDeferred || [];
+     OneSignalDeferred.push(async function(OneSignal) {
+     await OneSignal.init({
       appId: "7c7846ae-53e5-4578-9b87-c4c26154477e",
-      allowLocalhostAsSecureOrigin: true
+      path: "/Mate369-pwa/",
+      serviceWorkerParam: { scope: "/Mate369-pwa/" },
+      serviceWorkerPath: "OneSignalSDKWorker.js"
     });
   });
 </script>
