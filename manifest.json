@@ -1,0 +1,15 @@
+{
+  "name": "Mate369 Pokies & Live Games",
+  "short_name": "Mate369",
+  "start_url": "https://www.mate369.com/Register?p=JC",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#00875f",
+  "icons": [
+    {
+      "src": "https://tommybaby7676.github.io/Mate369-b/images.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ]
+}
