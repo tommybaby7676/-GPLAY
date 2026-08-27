@@ -13,13 +13,12 @@
     <script>
       window.OneSignalDeferred = window.OneSignalDeferred || [];
       OneSignalDeferred.push(async function(OneSignal) {
-        await OneSignal.init({
-          appId: "7c7846ae-53e5-4578-9b87-c4c26154477e",
-          serviceWorkerParam: { scope: '/Mate369-pwa/' },
-          serviceWorkerPath: 'OneSignalSDKWorker.js'
-        });
-      });
-    </script>
+      await OneSignal.init({
+      appId: "7c7846ae-53e5-4578-9b87-c4c26154477e",
+      allowLocalhostAsSecureOrigin: true
+    });
+  });
+</script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
