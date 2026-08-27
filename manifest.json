@@ -8,12 +8,12 @@
   "theme_color": "#00875f",
   "icons": [
     {
-      "src": "logo369.webp",
+      "src": "https://tommybaby7676.github.io/Mate369-pwa/logo369.webp",
       "sizes": "192x192",
       "type": "image/webp"
     },
     {
-      "src": "logo369.webp",
+      "src": "https://tommybaby7676.github.io/Mate369-pwa/logo369.webp",
       "sizes": "512x512",
       "type": "image/webp"
     }
