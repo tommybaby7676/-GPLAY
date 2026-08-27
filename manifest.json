@@ -1,11 +1,17 @@
 {
-  "name": "Mate369 Pokies & Live Games",
+  "name": "Mate369: Aussie Pokies & Casino",
   "short_name": "Mate369",
-  "start_url": "https://www.mate369.com/Register?p=JC",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#00875f",
   "theme_color": "#00875f",
   "icons": [
+    {
+      "src": "logo369.webp",
+      "sizes": "192x192",
+      "type": "image/webp"
+    },
     {
       "src": "logo369.webp",
       "sizes": "512x512",
